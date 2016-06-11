@@ -1,11 +1,10 @@
-FROM vrtulspud/debian-lighttpd:v1
+FROM vrtulspud/debian-lighttpd:1.0
 MAINTAINER vrtulspud <email@domain.com>
 
 # install lighttpd and PHP
 RUN apt-get update && apt-get -y install \
 	php5-cgi \
 	php5-gd \
-	imagemagick \
 	wget \
 && apt-get clean autoclean \
 && apt-get autoremove \
